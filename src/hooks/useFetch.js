@@ -13,10 +13,16 @@ export const useFetch = (apiPath, queryTerm="") => {
               Authorization: process.env.REACT_APP_API_AUTHORIZATION
             }
           };
-    
+          
           const response = await fetch(url, options);
           const json = await response.json();
-          setData(json.results);
+
+          if(json.results) {
+            setData(json.results);
+          } else {
+            setData(json);
+          }
+          
         }
         fetchMovies();
     }, [url])
