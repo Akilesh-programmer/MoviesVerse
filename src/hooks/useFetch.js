@@ -14,15 +14,18 @@ export const useFetch = (apiPath, queryTerm="") => {
             }
           };
           
-          const response = await fetch(url, options);
-          const json = await response.json();
+          try {
+            const response = await fetch(url, options);
+            const json = await response.json();
 
-          if(json.results) {
-            setData(json.results);
-          } else {
-            setData(json);
+            if(json.results) {
+              setData(json.results);
+            } else {
+              setData(json);
+            }
+          } catch {
+            console.log("Something Went Wrong with API Request");
           }
-          
         }
         fetchMovies();
     }, [url])
