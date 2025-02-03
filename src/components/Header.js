@@ -34,7 +34,7 @@ export const Header = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src={Logo} className="h-8" alt="MovieVerse Logo" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Movies's Hub</span>
+            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">MovieVerse</span>
         </Link>
         <div id="mobile-nav" className="flex space-x-2 md:order-2">
           <button onClick={() => setDarkMode(!darkMode)} data-tooltip-target="navbar-solid-bg-example-toggle-dark-mode-tooltip" type="button" data-toggle-dark="dark" className="flex items-center w-9 h-9 justify-center text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
